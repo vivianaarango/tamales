@@ -5,9 +5,9 @@
             <ul class="nav">
                 <li class="nav-title">Administradores</li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/admin-users-create') }}"><i class="nav-icon icon-plus"></i>Nuevo administrador</a></li>
-                <li class="nav-title">Usuarios</li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('admin/distributor-list') }}"><i class="nav-icon icon-grid"></i>Distribuidores</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('admin/distributor-edit-commission') }}"><i class="nav-icon icon-pin"></i>Comisiones Distribuidores</a></li>
+                <li class="nav-title">Producción</li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('admin/user-production') }}"><i class="nav-icon icon-grid"></i>Consultar</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="{{ url('admin/distributor-edit-commission') }}"><i class="nav-icon icon-pin"></i>Comisiones Distribuidores</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/commerce-list') }}"><i class="nav-icon icon-handbag"></i>Comercios</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/commerce-edit-commission') }}"><i class="nav-icon icon-pin"></i>Comisiones Comercios</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/client-list') }}"><i class="nav-icon icon-user"></i>Clientes</a></li>
@@ -17,9 +17,9 @@
                 <li class="nav-title">Pagos</li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/payment-admin-list') }}"><i class="nav-icon icon-wallet"></i>Solicitudes</a></li>
                 <li class="nav-title">Soporte</li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('admin/ticket-admin-list') }}"><i class="nav-icon icon-envelope"></i>Tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('admin/ticket-admin-list') }}"><i class="nav-icon icon-envelope"></i>Tickets</a></li>-->
                <!-- <li class="nav-title">Reportes</li>-->
-               <!-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/report/new-users') }}"><i class="nav-icon icon-people"></i>Usuarios Nuevos</a></li>-->git status
+               <!-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/report/new-users') }}"><i class="nav-icon icon-people"></i>Usuarios Nuevos</a></li>-->
             </ul>
         </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>

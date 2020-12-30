@@ -199,15 +199,6 @@
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     'App\\Repositories\\Contracts\\DbUsersRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
     'App\\Repositories\\Contracts\\DbAdminUsersRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbDistributorRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbCommerceRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbClientRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbProductRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbTicketRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbPaymentRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbBankAccountRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbBalanceRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
-    'App\\Repositories\\Contracts\\DbOrderRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
   ),
   'when' => 
   array (

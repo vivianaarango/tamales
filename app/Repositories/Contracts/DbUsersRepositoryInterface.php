@@ -50,32 +50,10 @@ interface DbUsersRepositoryInterface
 
     /**
      * @param int $userID
-     * @param string $email
-     * @param string $phone
-     * @param bool $phoneValidated
-     * @param string|null $password
-     * @return User
-     */
-    public function updateUser(
-        int $userID,
-        string $email,
-        string $phone,
-        bool $phoneValidated,
-        string $password = null
-    ): User;
-
-    /**
-     * @param int $userID
      * @param string $lastLogin
      * @return User
      */
     public function updateLastLogin(int $userID, string $lastLogin): User;
-
-    /**
-     * @param int $userID
-     * @return bool
-     */
-    public function deleteUser(int $userID): bool;
 
     /**
      * @param int $userLocation
@@ -111,10 +89,4 @@ interface DbUsersRepositoryInterface
         string $last_logged_in,
         string $phone_validated_date = null
     ): User;
-
-    /**
-     * @param int $userLocationID
-     * @return UserLocation
-     */
-    public function findByUserLocationID(int $userLocationID): UserLocation;
 }

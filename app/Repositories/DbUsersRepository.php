@@ -2,10 +2,6 @@
 namespace App\Repositories;
 
 use App\Models\User;
-use App\Models\UserLocation;
-use App\Repositories\Contracts\DbClientRepositoryInterface;
-use App\Repositories\Contracts\DbCommerceRepositoryInterface;
-use App\Repositories\Contracts\DbDistributorRepositoryInterface;
 use App\Repositories\Contracts\DbUsersRepositoryInterface;
 use Illuminate\Support\Collection;
 use Exception;
@@ -16,37 +12,6 @@ use Exception;
  */
 class DbUsersRepository implements DbUsersRepositoryInterface
 {
-    /**
-     * @var DbDistributorRepositoryInterface
-     */
-    private $dbDistributorRepository;
-
-    /**
-     * @var DbCommerceRepositoryInterface
-     */
-    private $dbCommerceRepository;
-
-    /**
-     * @var DbClientRepositoryInterface
-     */
-    private $dbClientRepository;
-
-    /**
-     * DbUsersRepository constructor.
-     * @param DbDistributorRepositoryInterface $dbDistributorRepository
-     * @param DbCommerceRepositoryInterface $dbCommerceRepository
-     * @param DbClientRepositoryInterface $dbClientRepository
-     */
-    public function __construct(
-        DbDistributorRepositoryInterface $dbDistributorRepository,
-        DbCommerceRepositoryInterface $dbCommerceRepository,
-        DbClientRepositoryInterface $dbClientRepository
-    ) {
-        $this->dbDistributorRepository = $dbDistributorRepository;
-        $this->dbCommerceRepository = $dbCommerceRepository;
-        $this->dbClientRepository = $dbClientRepository;
-    }
-
     /**
      * Login to users type admin or wholesaler
      *
@@ -157,32 +122,7 @@ class DbUsersRepository implements DbUsersRepositoryInterface
         return $user;
     }
 
-    /**
-     * @param int $userID
-     * @return bool
-     * @throws Exception
-     */
-    public function deleteUser(int $userID): bool
-    {
-        $user = $this->findById($userID);
 
-        if ($user->role == User::DISTRIBUTOR_ROLE){
-            $distributor = $this->dbDistributorRepository->findByUserID($user->id);
-            $distributor->delete();
-        }
-
-        if ($user->role == User::COMMERCE_ROLE){
-            $commerce = $this->dbCommerceRepository->findByUserID($user->id);
-            $commerce->delete();
-        }
-
-        if ($user->role == User::USER_ROLE){
-            $client = $this->dbClientRepository->findByUserID($user->id);
-            $client->delete();
-        }
-
-        return $user->delete();
-    }
 
     /**
      * @param int $userLocation
@@ -242,12 +182,4 @@ class DbUsersRepository implements DbUsersRepositoryInterface
         return $user;
     }
 
-    /**
-     * @param int $userLocationID
-     * @return UserLocation
-     */
-    public function findByUserLocationID(int $userLocationID): UserLocation
-    {
-        return UserLocation::findOrFail($userLocationID);
-    }
 }

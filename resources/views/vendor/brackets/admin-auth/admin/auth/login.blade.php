@@ -20,9 +20,9 @@
                                 {{ csrf_field() }}
                                 <div class="auth-header">
                                     <div class="center-block">
-                                        <img src="{{URL::asset('images/nuap.png')}}" style="width:40%" class="img-responsive mx-auto d-block">
+                                        <img src="{{URL::asset('images/logo-tamales.png')}}" style="width:40%" class="img-responsive mx-auto d-block">
                                     </div>
-                                    <p class="auth-subtitle">Bienvenido a Nuap</p>
+                                    <p class="auth-subtitle">Bienvenido a Tamales Tolimenses Eduard</p>
                                     <p class="auth-subtitle"><br>Usa tus credenciales para acceder a la plataforma<br></p>
                                 </div>
                                 <div class="auth-body">

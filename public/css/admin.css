@@ -6612,8 +6612,8 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #104ef9;
-  border-color: #0746f6;
+  background-color: #e0b405;
+  border-color: #8a6f04;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -17411,7 +17411,7 @@ canvas {
   flex-direction: column;
   padding: 0;
   color: #fff;
-  background: #294d9a;
+  background: #76931d;
 }
 
 .sidebar .sidebar-close {
@@ -17546,7 +17546,7 @@ canvas {
 
 .sidebar .nav-link.active {
   color: #fff;
-  background: #2d3093;
+  background: #e0b405;
 }
 
 .sidebar .nav-link.active .nav-icon {
@@ -17555,7 +17555,7 @@ canvas {
 
 .sidebar .nav-link:hover {
   color: #fff;
-  background: #2d3093;
+  background: #e0b405;
 }
 
 .sidebar .nav-link:hover .nav-icon {
@@ -21518,14 +21518,14 @@ body {
 
 .btn-primary,
 .btn-info {
-  background-color: #2d3093;
-  border-color: #1a1362;
+  background-color: #e0b405;
+  border-color: #b79200;
 }
 
 .btn-primary:hover,
 .btn-info:hover {
-  background-color: #104ef9;
-  border-color: #104ef9;
+  background-color: #f9ab10;
+  border-color: #8c5f08;
 }
 
 .btn-danger {
@@ -22063,7 +22063,7 @@ small select {
 .card-header {
   background-color: white;
   border-bottom: 1px solid rgba(207, 216, 220, 0.35);
-  color: #4273FA;
+  color: #6f8a1b;;
   font-weight: 600;
   padding: 1.25rem;
 }
@@ -22144,7 +22144,7 @@ small select {
 }
 
 .dropdown-header {
-  background: #2d3093;
+  background: #76931d;
   color: white;
   border-bottom: none;
 }
