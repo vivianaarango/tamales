@@ -20,9 +20,10 @@
                                 {{ csrf_field() }}
                                 <div class="auth-header">
                                     <div class="center-block">
-                                        <img src="{{URL::asset('images/logo-tamales.png')}}" style="width:40%" class="img-responsive mx-auto d-block">
+                                        <img src="{{URL::asset('images/logo-tamales.png')}}" style="width:60%" class="img-responsive mx-auto d-block">
                                     </div>
-                                    <p class="auth-subtitle">Bienvenido a Tamales Tolimenses Eduard</p>
+                                    <br>
+                                    <p class="text-center auth-subtitle">Bienvenido</p>
                                     <p class="auth-subtitle"><br>Usa tus credenciales para acceder a la plataforma<br></p>
                                 </div>
                                 <div class="auth-body">
@@ -43,9 +44,6 @@
                                             <input type="password" v-model="form.password" class="form-control" :class="{'form-control-danger': errors.has('password'), 'form-control-success': this.fields.password && this.fields.password.valid}" id="password" name="password" placeholder="Contraseña">
                                         </div>
                                         <div v-if="errors.has('password')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('password') }}</div>
-                                        <small class="form-text text-muted">
-                                            La contraseña debe contener minimo 8 caracteres, una mayuscula, un número y un carácter especial.
-                                        </small>
                                     </div>
 
                                     <div class="form-group">

@@ -4090,7 +4090,7 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -17411,7 +17411,7 @@ canvas {
   flex-direction: column;
   padding: 0;
   color: #fff;
-  background: #76931d;
+  background: #4b934c;
 }
 
 .sidebar .sidebar-close {
@@ -17546,7 +17546,7 @@ canvas {
 
 .sidebar .nav-link.active {
   color: #fff;
-  background: #e0b405;
+  background: #3b753c;
 }
 
 .sidebar .nav-link.active .nav-icon {
@@ -17555,7 +17555,7 @@ canvas {
 
 .sidebar .nav-link:hover {
   color: #fff;
-  background: #e0b405;
+  background: #2f5d30;
 }
 
 .sidebar .nav-link:hover .nav-icon {
@@ -21514,18 +21514,19 @@ body {
 
 .btn {
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .btn-primary,
 .btn-info {
-  background-color: #e0b405;
-  border-color: #b79200;
+  background-color: #f9c438;
+  border-color: #ca9e2d;
 }
 
 .btn-primary:hover,
 .btn-info:hover {
-  background-color: #f9ab10;
-  border-color: #8c5f08;
+  background-color: #f3c243;
+  border-color: #caa136;
 }
 
 .btn-danger {
@@ -22063,7 +22064,7 @@ small select {
 .card-header {
   background-color: white;
   border-bottom: 1px solid rgba(207, 216, 220, 0.35);
-  color: #6f8a1b;;
+  color: #4b934c;
   font-weight: 600;
   padding: 1.25rem;
 }
@@ -22620,7 +22621,7 @@ div.trumbowyg-dropdown-table table td.active {
 .auth .auth-subtitle {
   text-transform: uppercase;
   font-weight: bold;
-  color: #B9BBC6;
+  color: #9a9a9a;
   font-size: 12px;
   letter-spacing: 0;
   margin-bottom: 0;
@@ -22640,7 +22641,7 @@ div.trumbowyg-dropdown-table table td.active {
 }
 
 .auth label {
-  color: #9FA6B9;
+  color: #9a9a9a;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -22653,7 +22654,7 @@ div.trumbowyg-dropdown-table table td.active {
 }
 
 .auth .input-group .form-control {
-  border: 1px solid #b9c8de;
+  border: 1px solid #adbace;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-left: none;
