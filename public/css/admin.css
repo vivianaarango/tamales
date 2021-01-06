@@ -17984,7 +17984,7 @@ canvas {
 
   .sidebar-minimized .sidebar .nav-link:hover {
     width: 250px;
-    background: #4273FA;
+    background: #2f5d30;
   }
 
   .sidebar-minimized .sidebar .nav-link:hover .badge {
@@ -18010,7 +18010,7 @@ canvas {
   }
 
   .sidebar-minimized .sidebar .nav > .nav-dropdown:hover {
-    background: #4273FA;
+    background: #3b753c;
   }
 
   .sidebar-minimized .sidebar .nav > .nav-dropdown:hover > .nav-dropdown-items {
@@ -18056,7 +18056,7 @@ canvas {
   }
 
   *[dir=rtl] .sidebar-minimized .sidebar .nav > .nav-dropdown:hover {
-    background: #4273FA;
+    background: #3b753c;
   }
 
   *[dir=rtl] .sidebar-minimized .sidebar .nav > .nav-dropdown:hover > .nav-dropdown-items {
@@ -21520,13 +21520,13 @@ body {
 .btn-primary,
 .btn-info {
   background-color: #f9c438;
-  border-color: #ca9e2d;
+  border-color: #f3c448;
 }
 
 .btn-primary:hover,
 .btn-info:hover {
-  background-color: #f3c243;
-  border-color: #caa136;
+  background-color: #ffbd13;
+  border-color: #e7af1f;
 }
 
 .btn-danger {

@@ -199,6 +199,8 @@
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     'App\\Repositories\\Contracts\\DbUsersRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
     'App\\Repositories\\Contracts\\DbAdminUsersRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
+    'App\\Repositories\\Contracts\\DbProductionTypeRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
+    'App\\Repositories\\Contracts\\DbProductionRepositoryInterface' => 'App\\Providers\\RepositoryServiceProvider',
   ),
   'when' => 
   array (

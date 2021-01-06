@@ -3,7 +3,6 @@
 <head>
     <title>Producción</title>
     <link rel="icon" href="{{URL::asset('images/logo-tamales.png')}}"/>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcFJ6KrZPpEM93HrS1fUhF2CxD7UTkWdw&libraries=places&callback=initMap"></script>
 </head>
 
 @section('body')

@@ -37633,7 +37633,7 @@ var formatComponentName = (noop);
     }
 
     return (
-      (name ? ("<" + (classify(name)) + ">") : "<Anonymous>") +
+      (name ? ("<" + (classify(name)) + ">") : "<>") +
       (file && includeFile !== false ? (" at " + file) : '')
     )
   };

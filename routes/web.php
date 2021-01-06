@@ -41,6 +41,14 @@ Route::get('/admin/admin-users-create', 'Admin\AdminUsersController@create');
 /* Store */
 Route::post('/admin/admin-users-store', 'Admin\AdminUsersController@store');
 
-### Distributor
+### Production
 /* List */
-Route::get('/admin/user-production', 'Admin\UsersController@production');
+Route::get('/admin/production-list', 'Admin\ProductionController@list');
+/* View create */
+Route::get('/admin/production-create', 'Admin\ProductionController@create');
+/* Store */
+Route::post('/admin/production-store', 'Admin\ProductionController@store');
+/* View edit */
+Route::get('/admin/production/{production}/edit','Admin\ProductionController@edit')->name('admin/production/edit');
+/* Export */
+Route::get('/admin/production/export', 'Admin\ProductionController@export')->name('admin/production/export');

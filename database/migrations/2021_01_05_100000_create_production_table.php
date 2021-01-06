@@ -18,8 +18,8 @@ class CreateProductionTable extends Migration
     {
         Schema::create('production', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('lote');
-            $table->integer('marmita_number');
+            $table->integer('lot');
+            $table->integer('marmitas');
             $table->integer('broken')->default(0);
             $table->integer('total');
             $table->dateTime('date');

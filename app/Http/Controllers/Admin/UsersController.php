@@ -53,7 +53,7 @@ class UsersController extends Controller
         $this->dbUserRepository->updateLastLogin($user->id, now());
 
         if ($user->role == User::ADMIN_ROLE) {
-            return redirect('admin/user-production');
+            return redirect('admin/production-list');
         }
 
         return redirect()->back();
@@ -68,7 +68,7 @@ class UsersController extends Controller
         $user = Session::get('user');
 
         if (isset($user) && $user->role == User::ADMIN_ROLE) {
-            return redirect('admin/user-production');
+            return redirect('admin/production-list');
         }
 
         if ($request->ajax()) {
@@ -88,34 +88,5 @@ class UsersController extends Controller
     {
         Session::remove('user');
         return redirect('/admin/user-session');
-    }
-
-    /**
-     * @param Request $request
-     * @return array|Factory|Application|RedirectResponse|Redirector|\Illuminate\View\View
-     */
-    public function production(Request $request)
-    {
-        $user = Session::get('user');
-        $data = AdminListing::create(User::class)
-            ->processRequestAndGet(
-                $request,
-                ['id', 'email', 'phone', 'status', 'last_logged_in'],
-                ['id', 'email', 'phone', 'status', 'last_logged_in']
-            );
-
-        if ($request->ajax()) {
-            return ['data' => $data, 'activation' => $user->role, 'url' => ''];
-        }
-
-        if (isset($user) && $user->role == User::ADMIN_ROLE) {
-            return view('admin.users.production', [
-                'activation' => $user->role,
-                'data' => $data,
-                'url' => ''
-            ]);
-        } else {
-            return redirect('/admin/user-session');
-        }
     }
 }
