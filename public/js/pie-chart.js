@@ -6,8 +6,8 @@ window.onload = function() {
             var colors = [
                 "#e7da0e",
                 "#2fa50d",
-                "#d42d3f",
                 "#18a7ba",
+                "#d42d3f",
                 "#000000",
                 "#FFFFFF",
                 "#FF0000",

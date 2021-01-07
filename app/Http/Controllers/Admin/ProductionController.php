@@ -5,6 +5,7 @@ use App\Exports\ProductionExport;
 use App\Exports\ProductsExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Production\IndexProduction;
+use App\Http\Requests\Admin\Production\IndexType;
 use App\Models\Production;
 use App\Models\ProductionType;
 use App\Models\Type;
@@ -219,5 +220,51 @@ class ProductionController extends Controller
         } else {
             return redirect('/admin/user-session');
         }
+    }
+
+    /**
+     * @param IndexType $request
+     * @return Factory|Application|RedirectResponse|Redirector|View
+     */
+    public function types(IndexType $request)
+    {
+        $userAdmin = Session::get('user');
+
+        if (isset($userAdmin) && $userAdmin->role == User::ADMIN_ROLE) {
+            /* @noinspection PhpUndefinedMethodInspection  */
+            $data = AdminListing::create(Type::class)
+                ->modifyQuery(function($query) {
+                    $query->orderBy('id', 'desc');
+                })->processRequestAndGet(
+                    $request,
+                    ['id', 'name'],
+                    ['id', 'name']
+                );
+
+            return view('admin.production.add-types', [
+                'data' => $data,
+                'activation' => $userAdmin->role,
+                'url' => url()->current()
+            ]);
+        }
+
+        return redirect('/admin/user-session');
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|RedirectResponse|Redirector
+     */
+    public function storeTypes(Request $request)
+    {
+        $user = Session::get('user');
+        if (isset($user) && $user->role == User::ADMIN_ROLE) {
+            $data['name'] = $request['name'];
+            Type::create($data);
+
+            return redirect('admin/production/types');
+        }
+
+        return redirect('/admin/user-session');
     }
 }

@@ -11,6 +11,7 @@ use Illuminate\Foundation\Application;
  * @property string name
  *
  * @package App\Models
+ * @method static create($data)
  */
 class Type extends Model
 {
