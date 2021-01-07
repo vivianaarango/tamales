@@ -17411,7 +17411,7 @@ canvas {
   flex-direction: column;
   padding: 0;
   color: #fff;
-  background: #4b934c;
+  background: #062100;
 }
 
 .sidebar .sidebar-close {
@@ -17938,7 +17938,7 @@ canvas {
   }
 
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link {
-    background: #4273FA;
+    background: #2f5d30;
   }
 
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link .nav-icon {
@@ -22064,7 +22064,7 @@ small select {
 .card-header {
   background-color: white;
   border-bottom: 1px solid rgba(207, 216, 220, 0.35);
-  color: #4b934c;
+  color: #184c0c;
   font-weight: 600;
   padding: 1.25rem;
 }

@@ -52,3 +52,5 @@ Route::post('/admin/production-store', 'Admin\ProductionController@store');
 Route::get('/admin/production/{production}/edit','Admin\ProductionController@edit')->name('admin/production/edit');
 /* Export */
 Route::get('/admin/production/export', 'Admin\ProductionController@export')->name('admin/production/export');
+/* Pie types report */
+Route::get('/admin/production/report-types', 'Admin\ProductionController@productionTypes');

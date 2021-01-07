@@ -33,11 +33,13 @@
 <div class="card-header">
     <i class="fa fa-plus"></i>&nbsp; Agregar tamales por tipo
 </div>
-@foreach ($types as $item)
-    <div class="form-group row align-items-center">
-        <label for="{{ $item->name }}" class="col-form-label text-md-right" :class="'col-md-3'">{{ $item->name }}</label>
-        <div :class="'col-md-9 col-xl-7'">
-            <input value="0" id="{{ $item->name }}" name="{{ $item->name }}" type="number" class="form-control"  placeholder="{{ $item->name }}">
+<div class="card-body">
+    @foreach ($types as $item)
+        <div class="form-group row align-items-center">
+            <label for="{{ $item->name }}" class="col-form-label text-md-right" :class="'col-md-3'">{{ $item->name }}</label>
+            <div :class="'col-md-9 col-xl-7'">
+                <input value="0" id="{{ $item->name }}" name="{{ $item->name }}" type="number" class="form-control"  placeholder="{{ $item->name }}">
+            </div>
         </div>
-    </div>
-@endforeach
+    @endforeach
+</div>

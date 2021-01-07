@@ -205,4 +205,19 @@ class ProductionController extends Controller
         return Excel::download(new ProductionExport, 'producción-'.$date.'.xlsx');
     }
 
+    /**
+     * @return Factory|Application|RedirectResponse|View
+     */
+    public function productionTypes()
+    {
+        $user = Session::get('user');
+
+        if (isset($user) && $user->role == User::ADMIN_ROLE) {
+            return view('admin.production.report-types', [
+                'activation' => $user->role
+            ]);
+        } else {
+            return redirect('/admin/user-session');
+        }
+    }
 }
