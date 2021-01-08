@@ -37,7 +37,11 @@ class ProductionExport implements FromArray, WithMapping, WithHeadings
                     ->where('type_id', $value->id)
                     ->first();
 
-                $prod[$prodType->name] = $prodType->quantity;
+                 if (!is_null($prodType)){
+                     $prod[$prodType->name] = $prodType->quantity;
+                 } else {
+                     $prod[$item->name] = 0;
+                 }
             }
 
             array_push($data, $prod);
