@@ -8,7 +8,7 @@
 @section('body')
     <div class="container-xl">
         <div class="card">
-            <form id="form-basic" method="post" enctype="multipart/form-data" action="{{ $url }}">
+            <form id="form-basic" method="post" enctype="multipart/form-data" action="{{ url('admin/production/update') }}">
                 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
                 <input type="hidden" name="production_id" id="product_id-token" value="{{ $production['id'] }}" />
                 <form class="form-horizontal form-create">

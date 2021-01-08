@@ -182,9 +182,11 @@ class ProductionController extends Controller
                     $item->id
                 )->first();
 
-                $productionType['quantity'] = $request[$item->name];
-                $productionType->save();
-                $total = $total + $productionType['quantity'];
+                if (!is_null($productionType)) {
+                    $productionType->quantity = isset($request[$item->name]) ? $request[$item->name] : 0;
+                    $productionType->save();
+                    $total = $total + $productionType->quantity;
+                }
             }
 
             $production = $this->dbProductionRepository->findByID($request['production_id']);
